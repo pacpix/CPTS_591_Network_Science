@@ -19,8 +19,7 @@ import matplotlib.pyplot as plt
 # Main program flow
 def main():
 
-    """    
-     # Create networks from gml datasets (#1)
+    # Create networks from gml datasets (#1)
     n_political = ig.Graph.Read(
         f=os.getcwd() + '/Datasets/polblogs.gml', format='gml')
     n_neural = ig.Graph.Read(
@@ -30,19 +29,19 @@ def main():
     n_lesmis = ig.Graph.Read(
         f=os.getcwd() + '/Datasets/lesmis.gml', format='gml')
 
-    # Calculate centrality measures 
+    # Calculate centrality measures
     calculate_centrality_measures(n_political, 'Political Blogs')
     calculate_centrality_measures(n_neural, 'Neural Network')
     calculate_centrality_measures(n_internet, 'Internet')
     calculate_centrality_measures(n_lesmis, 'Les Miserables')
-    """
+
     # Create random graphs, Erdos-Renyi and Barabasi-Albert (#2)
     n_er1 = ig.Graph.Erdos_Renyi(n=20, p=0.01)
     n_er2 = ig.Graph.Erdos_Renyi(n=40, p=0.01)
     n_ba1 = ig.Graph.Barabasi(n=20)
     n_ba2 = ig.Graph.Barabasi(n=40)
-    
-    # Calculate descriptive statistics 
+
+    # Calculate descriptive statistics
     calculate_descriptive_statistics(n_er1, 'Erdos_Renyi_20')
     calculate_descriptive_statistics(n_er2, 'Erdos_Renyi_40')
     calculate_descriptive_statistics(n_ba1, 'Barabasi_Albert_20')
@@ -119,7 +118,8 @@ def calculate_descriptive_statistics(network, network_name):
     eigval_2nd = values[1]
     eigval_max = max(values)
 
-    print(network_name + ': ', n, m, dmin, dmax, l_avg, D, ccg, eigval_2nd, eigval_max, '\n')
+    print(network_name + ': ', n, m, dmin, dmax,
+          l_avg, D, ccg, eigval_2nd, eigval_max, '\n')
 
 
 # Problem 2 Part 3
@@ -137,7 +137,7 @@ def plot_eigenvectors(network, network_name):
     eigvec_2nd = vectors[:, list(values).index(values[1])]
 
     # Create scatter plot
-    plt.title(network_name) 
+    plt.title(network_name)
     plt.xlabel('Vertex ID')
     plt.ylabel('Eigenvector Value')
     plt.scatter(np.arange(0, 20, 1), eigvec_max, color='blue')
