@@ -12,27 +12,81 @@ import os
 import glob
 
 # Third Party Libraries
-import networkx as nx
 from bs4 import BeautifulSoup as bs
+import matplotlib.pyplot as plt
+import networkx as nx
+from networkx.algorithms import bipartite
+import numpy as np
 import pandas as pd
+
+# CSV Filenames
+social_nodes_file = 'social_nodes.csv'
+technical_nodes_file = 'technical_nodes.csv'
+connections_file = 'connections.csv'
+technical_connections_file = 'technical_connections.csv'
+
 
 # Main program flow
 def main():
-    
+
     # Build csv of individual connections and csv of unique nodes
     create_csv_files()
-    
-    
+    # Creates graph and writes it to gml file
+    create_gml_file()
+
+
+# Adds technical node to technical node connections
+def append_technical_connections():
+
+    with open(connections_file, 'a') as confile:
+        with open(technical_connections_file, 'r') as techfile:
+            csv_reader = csv.reader(techfile)
+            for row in csv_reader:
+                # Connects repo to repo
+                csv_writer = csv.writer(confile, delimiter=',')
+                csv_writer.writerow(row)
+
+
+# Append lines to connections csv
+def append_to_connections_csv(repo_node, contributor_list):
+
+    with open(connections_file, 'a') as csv_file:
+        # Connects developer to repo
+        csv_writer = csv.writer(csv_file, delimiter=',')
+        for contributor in contributor_list:
+            csv_writer.writerow([contributor, repo_node])
+
+
+# Append lines to nodes csv
+def append_to_nodes_csv(repo_node, contributor_list):
+
+    with open(technical_nodes_file, 'a') as csv_file:
+        # Add repo node
+        csv_writer = csv.writer(csv_file, delimiter=',')
+        csv_writer.writerow([repo_node])
+
+    with open(social_nodes_file, 'a') as csv_file:
+        # Add contributor nodes
+        csv_writer = csv.writer(csv_file, delimiter=',')
+        for contributor in contributor_list:
+            csv_writer.writerow([contributor])
+
+
 # Create CSV of connections
 def create_csv_files():
 
-    # Add title row to nodes csv file
-    with open('unique_nodes.csv', mode='w+') as csv_file:
+    # Add title row to social nodes csv file
+    with open(social_nodes_file, mode='w+') as csv_file:
         csv_writer = csv.writer(csv_file, delimiter=',')
-        csv_writer.writerow(['Name', 'Technical'])
-    
+        csv_writer.writerow(['Name'])
+
+    # Add title row to technical nodes csv file
+    with open(technical_nodes_file, mode='w+') as csv_file:
+        csv_writer = csv.writer(csv_file, delimiter=',')
+        csv_writer.writerow(['Name'])
+
     # Add title row to connections csv file
-    with open('connections.csv', mode='w+') as csv_file:
+    with open(connections_file, mode='w+') as csv_file:
         csv_writer = csv.writer(csv_file, delimiter=',')
         csv_writer.writerow(['Source_Node', 'Destination_Node'])
 
@@ -45,76 +99,95 @@ def create_csv_files():
         contributors = get_repo_contributors(htm)
         append_to_nodes_csv(repo, contributors)
         append_to_connections_csv(repo, contributors)
-    
-    # Remove duplicate nodes from nodes csv
-    remove_duplicate_nodes()
+
+    # Remove duplicate nodes from csv
+    remove_duplicate_nodes(social_nodes_file)
+    remove_duplicate_nodes(technical_nodes_file)
 
     # Add technical connections manually
     append_technical_connections()
-    
-
-# Append lines to connections csv 
-def append_to_connections_csv(repo_node, contributor_list):
-
-    with open('connections.csv', 'a') as csv_file:
-        # Connects developer to repo
-        csv_writer = csv.writer(csv_file, delimiter=',') 
-        for contributor in contributor_list:
-            csv_writer.writerow([contributor, repo_node])
 
 
-# Append lines to nodes csv 
-def append_to_nodes_csv(repo_node, contributor_list):
+def create_gml_file():
 
-    with open('unique_nodes.csv', 'a') as csv_file:
-        # Add repo node
-        csv_writer = csv.writer(csv_file, delimiter=',') 
-        csv_writer.writerow([repo_node, 1])
-        
-        # Add contributor nodes
-        for contributor in contributor_list:
-            csv_writer.writerow([contributor, 0])
+    # Create lists of social nodes, technical nodes, and connections
+    with open(social_nodes_file, mode='r') as sn_file:
+        next(sn_file)
+        social_nodes = [line.rstrip('\n') for line in sn_file]
 
+    with open(technical_nodes_file, mode='r') as tn_file:
+        next(tn_file)
+        technical_nodes = [line.rstrip('\n') for line in tn_file]
 
-def append_technical_connections():
-    
-    with open('connections.csv', 'a') as confile:
-        with open('technical_connections.csv', 'r') as techfile:
-            csv_reader = csv.reader(techfile)
-            for row in csv_reader:
-                # Connects repo to repo
-                csv_writer = csv.writer(confile, delimiter=',') 
-                csv_writer.writerow(row)
+    with open(connections_file, mode='r') as con_file:
+        csv_reader = csv.reader(con_file)
+        next(csv_reader)
+        connections = [tuple(row) for row in csv_reader]
+
+    # Create graph add nodes and edges
+    st_graph = nx.DiGraph()
+    st_graph.add_nodes_from(social_nodes, bipartite=0)
+    st_graph.add_nodes_from(technical_nodes, bipartite=1)
+    st_graph.add_edges_from(connections)
+
+    # Need to create subset of technical node labels
+    # Not showing social node labels
+    labels = {}
+    for node in st_graph.nodes():
+        if node in technical_nodes:
+            labels[node] = node
+
+    # Formats graph layout
+    # k equation is optimal spacing between nodes
+    pos = nx.spring_layout(
+        st_graph, k=.3*1/np.sqrt(len(st_graph.nodes())), iterations=20)
+
+    # Draw nodes, edges, and labels
+    nx.draw_networkx_nodes(st_graph, pos, nodelist=technical_nodes,
+                           node_size=500, node_color='cyan', node_shape='s',
+                           edgecolors='black', label='repository')
+    nx.draw_networkx_nodes(st_graph, pos, nodelist=social_nodes, alpha=.5,
+                           node_size=15, node_color='blue', node_shape='o',
+                           edgecolors='black', label='Developer')
+    nx.draw_networkx_edges(st_graph, pos, alpha=.5, edge_color='purple')
+    nx.draw_networkx_labels(st_graph, pos, labels,
+                            font_size=5, font_weight='bold',
+                            font_color='black')
+    plt.show()
+
+    # Write network to gml file
+    nx.write_gml(st_graph, 'st_graph.gml')
 
 
 # Get list of repo contributors from htm file
 def get_repo_contributors(fname):
-    
+
     # The contributor names are in the 'alt' attribute of each img tag
     with open(fname, 'r') as file:
         contents = file.read()
         soup = bs(contents, features='lxml')
-        contributors = [img.get('alt') for img in soup.find_all('img', {'class':'avatar mr-2', 'alt':True})]
-    
+        contributors = [img.get('alt') for img in soup.find_all(
+            'img', {'class': 'avatar mr-2', 'alt': True})]
+
     return contributors
 
 
 # Get repo name from file name
 def get_repo_name(fname):
-    
+
     # Get file name without path and extension
     repo = os.path.basename(fname)
     repo = os.path.splitext(repo)[0]
-    
+
     return repo
 
 
 # Remove duplicate nodes from nodes csv
-def remove_duplicate_nodes():
+def remove_duplicate_nodes(dupe_file):
 
-    csv_file = pd.read_csv('unique_nodes.csv')
+    csv_file = pd.read_csv(dupe_file)
     csv_file.drop_duplicates(inplace=True)
-    csv_file.to_csv('unique_nodes.csv', index=False)
+    csv_file.to_csv(dupe_file, index=False)
 
 
 # Start program exection at main
