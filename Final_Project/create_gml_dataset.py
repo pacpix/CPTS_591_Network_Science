@@ -104,6 +104,10 @@ def create_csv_files():
     remove_duplicate_nodes(social_nodes_file)
     remove_duplicate_nodes(technical_nodes_file)
 
+    # Remove bot users from nodes and connections
+    remove_bot_users(social_nodes_file)
+    remove_bot_users(connections_file)
+
     # Add technical connections manually
     append_technical_connections()
 
@@ -129,31 +133,6 @@ def create_gml_file():
     st_graph.add_nodes_from(social_nodes, bipartite=0)
     st_graph.add_nodes_from(technical_nodes, bipartite=1)
     st_graph.add_edges_from(connections)
-
-    # Need to create subset of technical node labels
-    # Not showing social node labels
-    labels = {}
-    for node in st_graph.nodes():
-        if node in technical_nodes:
-            labels[node] = node
-
-    # Formats graph layout
-    # k equation is optimal spacing between nodes
-    pos = nx.spring_layout(
-        st_graph, k=.3*1/np.sqrt(len(st_graph.nodes())), iterations=20)
-
-    # Draw nodes, edges, and labels
-    nx.draw_networkx_nodes(st_graph, pos, nodelist=technical_nodes,
-                           node_size=500, node_color='cyan', node_shape='s',
-                           edgecolors='black', label='repository')
-    nx.draw_networkx_nodes(st_graph, pos, nodelist=social_nodes, alpha=.5,
-                           node_size=15, node_color='blue', node_shape='o',
-                           edgecolors='black', label='Developer')
-    nx.draw_networkx_edges(st_graph, pos, alpha=.5, edge_color='purple')
-    nx.draw_networkx_labels(st_graph, pos, labels,
-                            font_size=5, font_weight='bold',
-                            font_color='black')
-    plt.show()
 
     # Write network to gml file
     nx.write_gml(st_graph, 'st_graph.gml')
@@ -181,6 +160,18 @@ def get_repo_name(fname):
 
     return repo
 
+# Remove bot users from nodes and connections
+def remove_bot_users(bot_file):
+
+    bot_users = ['@dependabot', '@jake-the-bot', '@jongleberry-bot', 
+                '@persistbot', '@dependabot-preview', '@vue-bot']
+
+    with open(bot_file, 'r') as infile, open('temp.csv', 'w+') as outfile:
+        for line in infile:
+            if not any(bot in line for bot in bot_users):
+                outfile.write(line)
+    
+    os.system('mv temp.csv %s' %str(bot_file))
 
 # Remove duplicate nodes from nodes csv
 def remove_duplicate_nodes(dupe_file):
