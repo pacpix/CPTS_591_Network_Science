@@ -36,7 +36,7 @@ def main():
           bipartite.robins_alexander_clustering(st_graph))
 
     # Create degree distributions and visualize network
-    #plot_degree_distributions(st_graph, bottom_nodes)
+    plot_degree_distributions(st_graph, bottom_nodes)
     visualize_network(st_graph, top_nodes, bottom_nodes)
 
 
