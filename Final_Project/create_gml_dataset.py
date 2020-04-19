@@ -15,7 +15,6 @@ import glob
 from bs4 import BeautifulSoup as bs
 import matplotlib.pyplot as plt
 import networkx as nx
-from networkx.algorithms import bipartite
 import numpy as np
 import pandas as pd
 
@@ -130,8 +129,8 @@ def create_gml_file():
 
     # Create graph add nodes and edges
     st_graph = nx.DiGraph()
-    st_graph.add_nodes_from(social_nodes, bipartite=0)
-    st_graph.add_nodes_from(technical_nodes, bipartite=1)
+    st_graph.add_nodes_from(social_nodes, repo=0)
+    st_graph.add_nodes_from(technical_nodes, repo=1)
     st_graph.add_edges_from(connections)
 
     # Write network to gml file
