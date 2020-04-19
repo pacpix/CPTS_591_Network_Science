@@ -30,7 +30,7 @@ def main():
     centrality_algorithms(st_graph)
 
     # Create degree distributions and visualize network
-    #plot_degree_distributions(st_graph, social_nodes, technical_nodes)
+    plot_degree_distributions(st_graph, social_nodes, technical_nodes)
     visualize_network(st_graph, social_nodes, technical_nodes)
 
 
