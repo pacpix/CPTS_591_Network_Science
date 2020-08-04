@@ -2,7 +2,7 @@
 Justin Stachofsky
 Dr. Gebremedhin
 CPTS 591
-5 May 2020
+3 August 2020
 Create gml file from GitHub html pages
 """
 
@@ -13,16 +13,22 @@ import glob
 
 # Third Party Libraries
 from bs4 import BeautifulSoup as bs
+from github import Github
 import matplotlib.pyplot as plt
 import networkx as nx
 import numpy as np
 import pandas as pd
+
+# File where access token stored
+import config
 
 # CSV Filenames
 social_nodes_file = 'social_nodes.csv'
 technical_nodes_file = 'technical_nodes.csv'
 connections_file = 'connections.csv'
 technical_connections_file = 'technical_connections.csv'
+following_connections_file = 'following_connections.csv'
+follower_connections_file = 'follower_connections.csv'
 
 
 # Main program flow
@@ -34,15 +40,59 @@ def main():
     create_gml_file()
 
 
+
+def append_following_and_follower_connections():
+
+    with open(connections_file, 'a') as confile:
+        with open(following_connections_file, 'r') as followfile:
+            csv_reader = csv.reader(followfile)
+            csv_writer = csv.writer(confile, delimiter=',')
+            next(csv_reader)
+            for row in csv_reader:
+                # Connects contributor to following
+                csv_writer.writerow(row)
+    
+    with open(connections_file, 'a') as confile:
+        with open(follower_connections_file, 'r') as followfile:
+            csv_reader = csv.reader(followfile)
+            csv_writer = csv.writer(confile, delimiter=',')
+            next(csv_reader)
+            for row in csv_reader:
+                # Connects follower to contributor
+                csv_writer.writerow([row[1], row[0]])
+
+
+# Adds social nodes of followers and following
+def append_following_and_follower_nodes():
+
+    with open(social_nodes_file, 'a') as socfile:
+        with open(following_connections_file, 'r') as followfile:
+            csv_reader = csv.reader(followfile)
+            csv_writer = csv.writer(socfile, delimiter=',')
+            next(csv_reader)
+            for row in csv_reader:
+                # Connects repo to repo
+                csv_writer.writerow([row[1]])
+    
+    with open(social_nodes_file, 'a') as socfile:
+        with open(follower_connections_file, 'r') as followfile:
+            csv_reader = csv.reader(followfile)
+            csv_writer = csv.writer(socfile, delimiter=',')
+            next(csv_reader)
+            for row in csv_reader:
+                # Connects repo to repo
+                csv_writer.writerow([row[1]])
+
+
 # Adds technical node to technical node connections
 def append_technical_connections():
 
     with open(connections_file, 'a') as confile:
         with open(technical_connections_file, 'r') as techfile:
             csv_reader = csv.reader(techfile)
+            csv_writer = csv.writer(confile, delimiter=',')
             for row in csv_reader:
                 # Connects repo to repo
-                csv_writer = csv.writer(confile, delimiter=',')
                 csv_writer.writerow(row)
 
 
@@ -74,41 +124,61 @@ def append_to_nodes_csv(repo_node, contributor_list):
 # Create CSV of connections
 def create_csv_files():
 
-    # Add title row to social nodes csv file
-    with open(social_nodes_file, mode='w+') as csv_file:
-        csv_writer = csv.writer(csv_file, delimiter=',')
-        csv_writer.writerow(['Name'])
+    # # Add title row to contributor nodes csv file
+    # with open(social_nodes_file, mode='w+') as csv_file:
+    #     csv_writer = csv.writer(csv_file, delimiter=',')
+    #     csv_writer.writerow(['Name'])
 
-    # Add title row to technical nodes csv file
-    with open(technical_nodes_file, mode='w+') as csv_file:
-        csv_writer = csv.writer(csv_file, delimiter=',')
-        csv_writer.writerow(['Name'])
+    # # Add title row to technical nodes csv file
+    # with open(technical_nodes_file, mode='w+') as csv_file:
+    #     csv_writer = csv.writer(csv_file, delimiter=',')
+    #     csv_writer.writerow(['Name'])
 
-    # Add title row to connections csv file
-    with open(connections_file, mode='w+') as csv_file:
-        csv_writer = csv.writer(csv_file, delimiter=',')
-        csv_writer.writerow(['Source_Node', 'Destination_Node'])
+    # # Add title row to connections csv file
+    # with open(connections_file, mode='w+') as csv_file:
+    #     csv_writer = csv.writer(csv_file, delimiter=',')
+    #     csv_writer.writerow(['Source_Node', 'Destination_Node'])
+    
+    # # Add title row to following connections csv file
+    # with open(following_connections_file, mode='w+') as csv_file:
+    #     csv_writer = csv.writer(csv_file, delimiter=',')
+    #     csv_writer.writerow(['Contributor', 'Following'])
+    
+    # # Add title row to followers connections csv file
+    # with open(follower_connections_file, mode='w+') as csv_file:
+    #     csv_writer = csv.writer(csv_file, delimiter=',')
+    #     csv_writer.writerow(['Contributor', 'Follower'])
 
-    # Path to htm files with contributor lists
-    path = os.getcwd() + '/Repository_Contributors_2020-04-13/*.htm'
+    # # Path to htm files with contributor lists
+    # path = os.getcwd() + '/Repository_Contributors_2020-04-13/*.htm'
 
-    # Glob is list of htm files at path
-    for htm in glob.glob(path):
-        repo = get_repo_name(htm)
-        contributors = get_repo_contributors(htm)
-        append_to_nodes_csv(repo, contributors)
-        append_to_connections_csv(repo, contributors)
+    # # Glob is list of htm files at path
+    # for htm in glob.glob(path):
+    #     repo = get_repo_name(htm)
+    #     contributors = get_repo_contributors(htm)
+    #     append_to_nodes_csv(repo, contributors)
+    #     append_to_connections_csv(repo, contributors)
 
+
+    # # Remove duplicates first, then make api calls
+    # remove_duplicate_nodes(social_nodes_file)
+    # get_following_and_follower_api()
+
+    # Add social nodes from following and followers
+    append_following_and_follower_nodes()
+    
     # Remove duplicate nodes from csv
     remove_duplicate_nodes(social_nodes_file)
     remove_duplicate_nodes(technical_nodes_file)
 
+    # Leaving bots in for now.  Discuss at next meeting
     # Remove bot users from nodes and connections
-    remove_bot_users(social_nodes_file)
-    remove_bot_users(connections_file)
+    #remove_bot_users(social_nodes_file)
+    #remove_bot_users(connections_file)
 
-    # Add technical connections manually
+    # Add remaining connections manually
     append_technical_connections()
+    append_following_and_follower_connections()
 
 
 def create_gml_file():
@@ -135,6 +205,39 @@ def create_gml_file():
 
     # Write network to gml file
     nx.write_gml(st_graph, 'st_graph.gml')
+
+
+def get_following_and_follower_api():
+    
+    git = Github(config.token)
+
+    with open(following_connections_file, 'a') as csv_file: 
+        with open(social_nodes_file, 'r') as socfile:
+            # Add following nodes
+            csv_writer = csv.writer(csv_file, delimiter=',')
+            csv_reader = csv.reader(socfile, delimiter=',')
+            next(csv_reader)
+            for row in csv_reader:
+                try:
+                    for user in git.get_user(row[0].lstrip('@')).get_following():
+                        csv_writer.writerow([row[0], '@' + user.login])
+                except Exception as ex:
+                    print(ex)
+                    print(row[0])
+
+    with open(follower_connections_file, 'a') as csv_file: 
+        with open(social_nodes_file, 'r') as socfile:
+            # Add following nodes
+            csv_writer = csv.writer(csv_file, delimiter=',')
+            csv_reader = csv.reader(socfile, delimiter=',')
+            next(csv_reader)
+            for row in csv_reader:
+                try:
+                    for user in git.get_user(row[0].lstrip('@')).get_followers():
+                        csv_writer.writerow(['@' + user.login, row[0]])
+                except Exception as ex: 
+                    print(ex)
+                    print(row[0])
 
 
 # Get list of repo contributors from htm file
