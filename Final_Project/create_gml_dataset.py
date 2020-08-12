@@ -139,15 +139,15 @@ def create_csv_files():
         csv_writer = csv.writer(csv_file, delimiter=',')
         csv_writer.writerow(['Source_Node', 'Destination_Node'])
     
-    # # Add title row to following connections csv file
-    # with open(following_connections_file, mode='w+') as csv_file:
-    #     csv_writer = csv.writer(csv_file, delimiter=',')
-    #     csv_writer.writerow(['Contributor', 'Following'])
+    # Add title row to following connections csv file
+    with open(following_connections_file, mode='w+') as csv_file:
+        csv_writer = csv.writer(csv_file, delimiter=',')
+        csv_writer.writerow(['Contributor', 'Following'])
     
-    # # Add title row to followers connections csv file
-    # with open(follower_connections_file, mode='w+') as csv_file:
-    #     csv_writer = csv.writer(csv_file, delimiter=',')
-    #     csv_writer.writerow(['Contributor', 'Follower'])
+    # Add title row to followers connections csv file
+    with open(follower_connections_file, mode='w+') as csv_file:
+        csv_writer = csv.writer(csv_file, delimiter=',')
+        csv_writer.writerow(['Contributor', 'Follower'])
 
     # Path to htm files with contributor lists
     path = os.getcwd() + '/Repository_Contributors_2020-04-13/*.htm'
@@ -161,8 +161,8 @@ def create_csv_files():
 
 
     # Remove duplicates first, then make api calls
-    #remove_duplicate_nodes(social_nodes_file)
-    #get_following_and_follower_api()
+    remove_duplicate_nodes(social_nodes_file)
+    get_following_and_follower_api()
 
     # Add social nodes from following and followers
     append_following_and_follower_nodes()
@@ -170,11 +170,6 @@ def create_csv_files():
     # Remove duplicate nodes from csv
     remove_duplicate_nodes(social_nodes_file)
     remove_duplicate_nodes(technical_nodes_file)
-
-    # Leaving bots in for now.  Discuss at next meeting
-    # Remove bot users from nodes and connections
-    #remove_bot_users(social_nodes_file)
-    #remove_bot_users(connections_file)
 
     # Add remaining connections manually
     append_technical_connections()
@@ -265,18 +260,6 @@ def get_repo_name(fname):
 
     return repo
 
-# Remove bot users from nodes and connections
-def remove_bot_users(bot_file):
-
-    bot_users = ['@dependabot', '@jake-the-bot', '@jongleberry-bot', 
-                '@persistbot', '@dependabot-preview', '@vue-bot']
-
-    with open(bot_file, 'r') as infile, open('temp.csv', 'w+') as outfile:
-        for line in infile:
-            if not any(bot in line for bot in bot_users):
-                outfile.write(line)
-    
-    os.system('mv temp.csv %s' %str(bot_file))
 
 # Remove duplicate nodes from nodes csv
 def remove_duplicate_nodes(dupe_file):
