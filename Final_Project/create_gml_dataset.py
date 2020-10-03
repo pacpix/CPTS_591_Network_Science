@@ -2,7 +2,7 @@
 Justin Stachofsky
 Dr. Gebremedhin
 CPTS 591
-4 August 2020
+2 October 2020
 Create gml file from GitHub html pages
 """
 
@@ -20,7 +20,7 @@ import numpy as np
 import pandas as pd
 
 # File where access token stored
-import config
+#import config
 
 # CSV Filenames
 social_nodes_file = 'social_nodes.csv'
@@ -123,7 +123,7 @@ def append_to_nodes_csv(repo_node, contributor_list):
 
 # Create CSV of connections
 def create_csv_files():
-
+    
     # Add title row to contributor nodes csv file
     with open(social_nodes_file, mode='w+') as csv_file:
         csv_writer = csv.writer(csv_file, delimiter=',')
@@ -138,7 +138,7 @@ def create_csv_files():
     with open(connections_file, mode='w+') as csv_file:
         csv_writer = csv.writer(csv_file, delimiter=',')
         csv_writer.writerow(['Source_Node', 'Destination_Node'])
-    
+
     # Add title row to following connections csv file
     with open(following_connections_file, mode='w+') as csv_file:
         csv_writer = csv.writer(csv_file, delimiter=',')
@@ -148,7 +148,7 @@ def create_csv_files():
     with open(follower_connections_file, mode='w+') as csv_file:
         csv_writer = csv.writer(csv_file, delimiter=',')
         csv_writer.writerow(['Contributor', 'Follower'])
-
+    
     # Path to htm files with contributor lists
     path = os.getcwd() + '/Repository_Contributors_2020-04-13/*.htm'
 
@@ -170,7 +170,7 @@ def create_csv_files():
     # Remove duplicate nodes from csv
     remove_duplicate_nodes(social_nodes_file)
     remove_duplicate_nodes(technical_nodes_file)
-
+    
     # Add remaining connections manually
     append_technical_connections()
     append_following_and_follower_connections()
