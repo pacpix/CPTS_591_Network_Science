@@ -36,9 +36,49 @@ def main():
 
     # Build csv of individual connections and csv of unique nodes
     create_csv_files()
+    # Anonymizes social nodes
+    anonymize_dataset()
     # Creates graph and writes it to gml file
     create_gml_file()
 
+# Removes names from social node connections
+def anonymize_dataset():
+
+    # Create a dictionary of social node names and anonymized node names
+    i = 1
+    node_dict = {}
+    with open(social_nodes_file, 'r') as socfile:
+        csv_reader = csv.reader(socfile)
+        next(csv_reader)
+        for row in csv_reader:
+            node_dict.update({row[0]:'S' + str(i)})
+            i = i + 1
+
+    # Open connections and social nodes files and store them in string variables
+    connections = open(connections_file, 'r')
+    connections = ''.join([j for j in connections]) 
+    socnodes = open(social_nodes_file, 'r')
+    socnodes = ''.join([j for j in socnodes])
+
+    # Find and replace dictionary values in string
+    for k, v in node_dict.items():
+        connections = connections.replace(k, v)
+        socnodes = socnodes.replace(k,v)
+    
+    # Write strings back into source csv
+    csv_writer = open(connections_file, 'w')
+    csv_writer.writelines(connections)
+    csv_writer.close()
+    csv_writer = open(social_nodes_file, 'w')
+    csv_writer.writelines(socnodes)
+    csv_writer.close()
+
+    # Delete temporary csv files
+    os.remove(following_connections_file)
+    os.remove(follower_connections_file)
+
+
+        
 
 # Appends follower and following connections to main connections csv
 def append_following_and_follower_connections():
