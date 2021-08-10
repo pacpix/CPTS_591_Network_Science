@@ -231,12 +231,17 @@ def create_gml_file():
         csv_reader = csv.reader(con_file)
         next(csv_reader)
         connections = [tuple(row) for row in csv_reader]
+    
+    with open(technical_connections_file, mode='r') as tcon_file:
+        csv_reader = csv.reader(tcon_file)
+        technical_connections = [tuple(row) for row in csv_reader]
 
     # Create graph add nodes and edges
     st_graph = nx.DiGraph()
     st_graph.add_nodes_from(social_nodes, repo=0)
     st_graph.add_nodes_from(technical_nodes, repo=1)
-    st_graph.add_edges_from(connections)
+    st_graph.add_edges_from(connections, technical=0)
+    st_graph.add_edges_from(technical_connections, technical=1)
 
     # Write network to gml file
     nx.write_gml(st_graph, 'st_graph.gml')
