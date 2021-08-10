@@ -29,6 +29,7 @@ connections_file = 'connections.csv'
 technical_connections_file = 'technical_connections.csv'
 following_connections_file = 'following_connections.csv'
 follower_connections_file = 'follower_connections.csv'
+social_technical_connections_file = 'social_technical_connections.csv'
 
 
 # Main program flow
@@ -59,11 +60,14 @@ def anonymize_dataset():
     connections = ''.join([j for j in connections]) 
     socnodes = open(social_nodes_file, 'r')
     socnodes = ''.join([j for j in socnodes])
+    soctechcons = open(social_technical_connections_file, 'r')
+    soctechcons = ''.join([j for j in soctechcons])
 
     # Find and replace dictionary values in string
     for k, v in node_dict.items():
         connections = connections.replace(k, v)
         socnodes = socnodes.replace(k,v)
+        soctechcons = soctechcons.replace(k,v)
     
     # Write strings back into source csv
     csv_writer = open(connections_file, 'w')
@@ -71,6 +75,9 @@ def anonymize_dataset():
     csv_writer.close()
     csv_writer = open(social_nodes_file, 'w')
     csv_writer.writelines(socnodes)
+    csv_writer.close()
+    csv_writer = open(social_technical_connections_file, 'w')
+    csv_writer.writelines(soctechcons)
     csv_writer.close()
 
     # Delete temporary csv files
@@ -136,16 +143,6 @@ def append_technical_connections():
                 csv_writer.writerow(row)
 
 
-# Append lines to connections csv
-def append_to_connections_csv(repo_node, contributor_list):
-
-    with open(connections_file, 'a') as csv_file:
-        # Connects developer to repo
-        csv_writer = csv.writer(csv_file, delimiter=',')
-        for contributor in contributor_list:
-            csv_writer.writerow([contributor, repo_node])
-
-
 # Append lines to nodes csv
 def append_to_nodes_csv(repo_node, contributor_list):
 
@@ -159,6 +156,16 @@ def append_to_nodes_csv(repo_node, contributor_list):
         csv_writer = csv.writer(csv_file, delimiter=',')
         for contributor in contributor_list:
             csv_writer.writerow([contributor])
+
+
+# Append lines to connections csv
+def append_to_soctech_connections_csv(repo_node, contributor_list):
+
+    with open(social_technical_connections_file, 'a') as csv_file:
+        # Connects developer to repo
+        csv_writer = csv.writer(csv_file, delimiter=',')
+        for contributor in contributor_list:
+            csv_writer.writerow([contributor, repo_node])
 
 
 # Create CSV of connections
@@ -197,7 +204,7 @@ def create_csv_files():
         repo = get_repo_name(htm)
         contributors = get_repo_contributors(htm)
         append_to_nodes_csv(repo, contributors)
-        append_to_connections_csv(repo, contributors)
+        append_to_soctech_connections_csv(repo, contributors)
 
 
     # Remove duplicates first, then make api calls
@@ -227,6 +234,8 @@ def create_gml_file():
         next(tn_file)
         technical_nodes = [line.rstrip('\n') for line in tn_file]
 
+    # In earlier versions "Connections" was all edges
+    # Now it is only social --> social
     with open(connections_file, mode='r') as con_file:
         csv_reader = csv.reader(con_file)
         next(csv_reader)
@@ -236,12 +245,17 @@ def create_gml_file():
         csv_reader = csv.reader(tcon_file)
         technical_connections = [tuple(row) for row in csv_reader]
 
+    with open (social_technical_connections_file, mode = 'r') as stcon_file:
+        csv_reader = csv.reader(stcon_file)
+        sociotechnical_connections = [tuple(row) for row in csv_reader]
+
     # Create graph add nodes and edges
     st_graph = nx.DiGraph()
     st_graph.add_nodes_from(social_nodes, repo=0)
     st_graph.add_nodes_from(technical_nodes, repo=1)
-    st_graph.add_edges_from(connections, technical=0)
-    st_graph.add_edges_from(technical_connections, technical=1)
+    st_graph.add_edges_from(connections, soc=1)
+    st_graph.add_edges_from(technical_connections, tech=1)
+    st_graph.add_edges_from(sociotechnical_connections, soctech=1)
 
     # Write network to gml file
     nx.write_gml(st_graph, 'st_graph.gml')

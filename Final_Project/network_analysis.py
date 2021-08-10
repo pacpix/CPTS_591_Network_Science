@@ -30,7 +30,9 @@ def main():
     technical_nodes = set(st_graph) - social_nodes
 
     # Get edge subsets
-    tech_to_tech = {(u,v) for u,v,e in st_graph.edges(data=True) if e['technical']==1}
+    tech_to_tech = {(u,v) for u, v, e in st_graph.edges(data=True) if e['tech']==1}
+    soc_to_soc = {(u,v) for u, v, e in st_graph.edges(data=True) if e['soc']==1}
+    soc_to_tech = {(u,v) for u, v, e in st_graph.edges(data=True) if e['soctech']==1}
 
     # Calculate descriptive statistics for network
     basic_algorithms(st_graph)
