@@ -43,9 +43,10 @@ def main():
     visualize_network(st_graph, social_nodes, technical_nodes)
 
     # Functions for the supply chain attack analysis
+    # Primarily used for data dump to excel, may add more to functions later
     sca_technical_influence(st_graph, social_nodes)
     sca_social_influence_targeted(st_graph, tech_to_tech)
-    sca_social_influence_dispersed(st_graph)
+    sca_social_influence_dispersed(st_graph, soc_to_soc, tech_to_tech)
     sca_lowsoc_hightech(st_graph)
 
 
@@ -140,14 +141,29 @@ def plot_degree_distributions(graph, social_nodes, technical_nodes):
 
 # Supply chain analysis for scenario where
 # (1) User isolated from social network *AND* repository is dependency for many technical nodes
-def sca_lowsoc_hightech(st_graph):
-    return
-
+def sca_lowsoc_hightech(graph):
+   
+    # Get in degree and out degree counts
+    print('lowsoc_hightech')
+    for x in graph.in_degree():
+        print(x)
+    for x in graph.out_degree():
+        print(x)
+    
 
 # Supply chain analysis for scenario where
 # Social actor has contributed to many technical repos
-def sca_social_influence_dispersed(graph):
-    return
+def sca_social_influence_dispersed(graph, soc_to_soc, tech_to_tech):
+    
+    # Keep only social --> technical relations
+    print('soc_dispersed')
+    graph.remove_edges_from(soc_to_soc)
+    graph.remove_edges_from(tech_to_tech)
+    # Create dictionary of out degree output of remaining relations
+    print(nx.out_degree_centrality(graph))
+    # Get connection counts per node
+    for x in graph.out_degree():
+        print(x)
 
 
 # Supply chain analysis for scenario where
@@ -155,6 +171,7 @@ def sca_social_influence_dispersed(graph):
 def sca_social_influence_targeted(graph, tech_to_tech):
     
     # Remove edges between technical nodes
+    print('soc_targeted')
     graph.remove_edges_from(tech_to_tech)
     # Create dictionary from in degree output
     print(nx.in_degree_centrality(graph))
@@ -165,9 +182,11 @@ def sca_social_influence_targeted(graph, tech_to_tech):
 def sca_technical_influence(graph, social_nodes):
     
     # Remove social nodes from the dataset, since only interested in technical supply chain
+    print('technical only')
     graph.remove_nodes_from(social_nodes)
     # Create dictionary from out degree centrality output 
     print(nx.out_degree_centrality(graph))
+    print(nx.degree_centrality(graph))
 
 
 # DEPRECATED --> Most visualization in R script now
