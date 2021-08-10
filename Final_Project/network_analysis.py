@@ -6,6 +6,9 @@ CPTS 591
 Analyze network from generated gml file
 """
 
+# stdlib
+import csv
+
 # Third Party Libraries
 import matplotlib.pyplot as plt
 import networkx as nx
@@ -13,6 +16,7 @@ import numpy as np
 
 # Filenames
 gml_file = 'st_graph.gml'
+
 
 
 # Main program flow
@@ -25,13 +29,23 @@ def main():
     social_nodes = {n for n, d in st_graph.nodes(data=True) if d['repo']==0}
     technical_nodes = set(st_graph) - social_nodes
 
-    # Calculate statistics for network
+    # Get edge subsets
+    tech_to_tech = {(u,v) for u,v,e in st_graph.edges(data=True) if e['technical']==1}
+
+    # Calculate descriptive statistics for network
     basic_algorithms(st_graph)
     centrality_algorithms(st_graph)
 
     # Create degree distributions and visualize network
     plot_degree_distributions(st_graph, social_nodes, technical_nodes)
     visualize_network(st_graph, social_nodes, technical_nodes)
+
+    # Functions for the supply chain attack analysis
+    sca_technical_influence(st_graph, social_nodes)
+    sca_social_influence_targeted(st_graph, tech_to_tech)
+    sca_social_influence_dispersed(st_graph)
+    sca_lowsoc_hightech(st_graph)
+
 
 
 # Basic statistics about the network
@@ -122,8 +136,41 @@ def plot_degree_distributions(graph, social_nodes, technical_nodes):
     plt.show()
 
 
-def visualize_network(graph, social_nodes, technical_nodes):
+# Supply chain analysis for scenario where
+# (1) User isolated from social network *AND* repository is dependency for many technical nodes
+def sca_lowsoc_hightech(st_graph):
+    return
+
+
+# Supply chain analysis for scenario where
+# Social actor has contributed to many technical repos
+def sca_social_influence_dispersed(graph):
+    return
+
+
+# Supply chain analysis for scenario where
+# Technical node has many contributors to repo
+def sca_social_influence_targeted(graph, tech_to_tech):
     
+    # Remove edges between technical nodes
+    graph.remove_edges_from(tech_to_tech)
+    # Create dictionary from in degree output
+    print(nx.in_degree_centrality(graph))
+    
+    
+# Supply chain analysis for scenario where
+# Repository is depednency for many technical nodes
+def sca_technical_influence(graph, social_nodes):
+    
+    # Remove social nodes from the dataset, since only interested in technical supply chain
+    graph.remove_nodes_from(social_nodes)
+    # Create dictionary from out degree centrality output 
+    print(nx.out_degree_centrality(graph))
+
+
+# DEPRECATED --> Most visualization in R script now
+# Creates diagrams of network
+def visualize_network(graph, social_nodes, technical_nodes):
     
     # Need to create subset of technical node labels
     # Not showing social node labels
