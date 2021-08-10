@@ -253,9 +253,9 @@ def create_gml_file():
     st_graph = nx.DiGraph()
     st_graph.add_nodes_from(social_nodes, repo=0)
     st_graph.add_nodes_from(technical_nodes, repo=1)
-    st_graph.add_edges_from(connections, soc=1)
-    st_graph.add_edges_from(technical_connections, tech=1)
-    st_graph.add_edges_from(sociotechnical_connections, soctech=1)
+    st_graph.add_edges_from(connections, soc=1, tech=0, soctech=0)
+    st_graph.add_edges_from(technical_connections, soc=0, tech=1, soctech=0)
+    st_graph.add_edges_from(sociotechnical_connections, soc=0, tech=0, soctech=1)
 
     # Write network to gml file
     nx.write_gml(st_graph, 'st_graph.gml')

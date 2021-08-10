@@ -1335,3347 +1335,4666 @@ graph [
     label "zloirock_core-js"
     repo 1
   ]
-  node [
-    id 267
-    label "Source_Node"
-  ]
-  node [
-    id 268
-    label "Destination_Node"
-  ]
   edge [
     source 0
     target 83
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 0
     target 220
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 0
     target 245
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 0
     target 248
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 1
     target 245
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 1
     target 246
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 1
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 1
     target 249
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 1
     target 250
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 1
     target 251
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 1
     target 252
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 1
     target 256
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 1
     target 259
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 1
     target 260
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 1
     target 261
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 1
     target 262
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 1
     target 263
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 1
     target 264
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 1
     target 265
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 1
     target 266
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 2
     target 245
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 2
     target 266
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 3
     target 161
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 3
     target 4
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 3
     target 6
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 3
     target 19
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 3
     target 246
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 4
     target 246
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 5
     target 14
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 5
     target 246
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 6
     target 246
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 7
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 7
     target 205
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 7
     target 174
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 7
     target 161
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 7
     target 4
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 7
     target 246
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 8
     target 246
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 9
     target 14
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 9
     target 5
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 9
     target 246
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 10
     target 7
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 10
     target 246
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 11
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 11
     target 6
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 11
     target 246
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 12
     target 246
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 13
     target 187
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 13
     target 18
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 13
     target 14
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 13
     target 6
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 13
     target 15
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 13
     target 246
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 14
     target 246
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 15
     target 246
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 16
     target 241
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 16
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 16
     target 200
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 16
     target 205
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 16
     target 174
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 16
     target 18
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 16
     target 14
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 16
     target 197
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 16
     target 15
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 16
     target 246
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 17
     target 169
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 17
     target 241
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 17
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 17
     target 174
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 17
     target 14
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 17
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 17
     target 237
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 17
     target 246
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 18
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 18
     target 246
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 19
     target 6
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 19
     target 246
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 20
     target 169
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 20
     target 86
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 20
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 21
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 21
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 22
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 23
     target 61
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 23
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 24
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 25
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 26
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 27
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 28
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 29
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 29
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 30
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 31
     target 54
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 31
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 32
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 32
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 33
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 34
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 35
     target 0
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 35
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 36
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 37
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 38
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 39
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 40
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 41
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 42
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 42
     target 25
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 42
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 43
     target 210
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 43
     target 174
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 43
     target 219
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 43
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 44
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 45
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 46
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 47
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 48
     target 197
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 48
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 49
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 50
     target 67
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 50
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 51
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 51
     target 199
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 51
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 52
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 53
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 54
     target 92
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 54
     target 31
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 54
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 55
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 56
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 57
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 58
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 59
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 60
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 61
     target 241
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 61
     target 23
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 61
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 62
     target 210
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 62
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 62
     target 221
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 62
     target 209
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 62
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 62
     target 261
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 62
     target 263
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 63
     target 218
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 63
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 64
     target 174
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 64
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 65
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 66
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 67
     target 241
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 67
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 67
     target 50
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 67
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 68
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 69
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 70
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 71
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 72
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 73
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 74
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 75
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 76
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 77
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 78
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 79
     target 174
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 79
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 80
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 81
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 82
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 82
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 83
     target 0
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 83
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 83
     target 108
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 83
     target 86
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 83
     target 117
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 83
     target 93
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 83
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 84
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 85
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 86
     target 20
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 86
     target 58
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 86
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 87
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 88
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 89
     target 169
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 89
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 89
     target 165
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 89
     target 218
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 89
     target 208
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 89
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 90
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 90
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 91
     target 83
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 91
     target 86
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 91
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 92
     target 54
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 92
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 93
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 94
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 95
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 96
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 97
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 98
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 99
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 100
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 100
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 101
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 101
     target 252
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 101
     target 261
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 101
     target 262
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 101
     target 263
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 101
     target 264
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 102
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 103
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 104
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 105
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 106
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 107
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 108
     target 83
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 108
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 109
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 110
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 111
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 112
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 112
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 113
     target 86
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 113
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 114
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 115
     target 229
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 115
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 115
     target 225
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 115
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 116
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 117
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 118
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 119
     target 241
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 119
     target 0
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 119
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 119
     target 187
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 119
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 120
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 121
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 122
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 123
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 124
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 125
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 126
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 127
     target 241
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 127
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 127
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 127
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 128
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 129
     target 0
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 129
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 129
     target 186
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 129
     target 200
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 129
     target 205
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 129
     target 161
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 129
     target 199
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 129
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 130
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 131
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 132
     target 128
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 132
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 133
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 134
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 135
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 136
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 137
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 138
     target 247
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 139
     target 248
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 140
     target 248
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 141
     target 249
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 142
     target 249
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 143
     target 249
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 144
     target 249
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 145
     target 249
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 146
     target 249
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 147
     target 249
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 148
     target 149
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 148
     target 249
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 149
     target 148
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 149
     target 249
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 150
     target 249
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 151
     target 249
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 152
     target 249
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 153
     target 249
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 154
     target 249
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 155
     target 249
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 156
     target 249
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 156
     target 265
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 157
     target 249
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 158
     target 249
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 158
     target 265
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 159
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 159
     target 250
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 160
     target 241
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 160
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 160
     target 250
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 161
     target 250
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 162
     target 163
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 162
     target 225
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 162
     target 251
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 163
     target 164
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 163
     target 225
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 163
     target 162
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 163
     target 251
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 164
     target 163
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 164
     target 251
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 165
     target 210
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 165
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 165
     target 212
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 165
     target 224
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 165
     target 221
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 165
     target 209
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 165
     target 217
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 165
     target 218
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 165
     target 227
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 165
     target 226
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 165
     target 219
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 165
     target 252
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 165
     target 261
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 165
     target 262
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 165
     target 263
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 166
     target 252
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 166
     target 265
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 167
     target 169
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 167
     target 241
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 167
     target 174
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 167
     target 175
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 167
     target 170
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 167
     target 253
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 168
     target 253
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 169
     target 174
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 169
     target 167
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 169
     target 253
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 170
     target 169
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 170
     target 253
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 171
     target 253
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 172
     target 253
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 173
     target 253
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 174
     target 169
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 174
     target 171
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 174
     target 167
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 174
     target 253
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 175
     target 169
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 175
     target 253
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 176
     target 254
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 176
     target 255
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 177
     target 254
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 177
     target 255
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 178
     target 254
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 178
     target 255
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 179
     target 254
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 179
     target 255
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 180
     target 254
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 180
     target 255
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 181
     target 254
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 181
     target 255
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 182
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 182
     target 237
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 182
     target 254
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 182
     target 255
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 183
     target 254
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 183
     target 255
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 183
     target 265
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 184
     target 254
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 184
     target 255
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 185
     target 191
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 185
     target 256
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 186
     target 256
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 187
     target 256
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 188
     target 256
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 189
     target 206
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 189
     target 256
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 190
     target 256
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 191
     target 185
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 191
     target 256
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 192
     target 256
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 193
     target 169
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 193
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 193
     target 256
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 194
     target 257
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 194
     target 258
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 195
     target 257
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 195
     target 258
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 196
     target 257
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 196
     target 258
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 197
     target 0
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 197
     target 257
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 197
     target 258
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 198
     target 257
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 198
     target 258
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 198
     target 265
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 199
     target 241
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 199
     target 0
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 199
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 199
     target 139
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 199
     target 83
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 199
     target 200
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 199
     target 205
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 199
     target 174
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 199
     target 197
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 199
     target 129
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 199
     target 259
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 200
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 200
     target 259
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 201
     target 259
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 202
     target 241
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 202
     target 205
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 202
     target 225
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 202
     target 237
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 202
     target 259
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 203
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 203
     target 259
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 204
     target 259
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 205
     target 241
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 205
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 205
     target 202
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 205
     target 236
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 205
     target 238
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 205
     target 237
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 205
     target 259
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 206
     target 241
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 206
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 206
     target 205
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 206
     target 174
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 206
     target 259
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 207
     target 260
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 208
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 208
     target 261
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 208
     target 263
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 209
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 209
     target 261
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 209
     target 262
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 209
     target 263
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 210
     target 137
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 241
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 0
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 205
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 229
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 213
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 212
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 165
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 224
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 220
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 221
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 225
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 209
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 217
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 218
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 227
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 226
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 230
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 222
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 62
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 228
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 208
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 211
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 219
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 231
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 210
     target 261
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 210
     target 262
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 210
     target 263
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 211
     target 174
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 211
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 211
     target 165
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 211
     target 225
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 211
     target 218
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 211
     target 226
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 211
     target 222
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 211
     target 261
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 211
     target 263
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 212
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 212
     target 210
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 212
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 212
     target 165
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 212
     target 220
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 212
     target 221
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 212
     target 225
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 212
     target 209
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 212
     target 217
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 212
     target 218
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 212
     target 226
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 212
     target 230
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 212
     target 211
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 212
     target 261
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 212
     target 262
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 212
     target 263
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 213
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 213
     target 261
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 213
     target 263
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 214
     target 261
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 214
     target 262
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 214
     target 263
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 215
     target 261
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 215
     target 262
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 215
     target 263
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 216
     target 241
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 216
     target 0
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 216
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 216
     target 205
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 216
     target 174
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 216
     target 229
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 216
     target 261
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 216
     target 262
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 216
     target 263
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 216
     target 264
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 217
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 217
     target 209
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 217
     target 218
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 217
     target 261
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 217
     target 262
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 217
     target 263
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 218
     target 210
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 218
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 218
     target 212
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 218
     target 165
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 218
     target 225
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 218
     target 217
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 218
     target 208
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 218
     target 211
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 218
     target 219
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 218
     target 262
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 218
     target 263
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 219
     target 262
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 220
     target 169
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 220
     target 241
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 220
     target 0
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 220
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 220
     target 210
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 220
     target 229
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 220
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 220
     target 212
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 220
     target 225
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 220
     target 218
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 220
     target 227
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 220
     target 262
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 221
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 221
     target 210
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 221
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 221
     target 212
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 221
     target 62
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 221
     target 262
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 221
     target 263
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 222
     target 262
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 223
     target 218
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 223
     target 262
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 224
     target 210
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 224
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 224
     target 225
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 224
     target 262
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 225
     target 210
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 225
     target 14
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 225
     target 229
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 225
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 225
     target 212
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 225
     target 165
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 225
     target 220
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 225
     target 209
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 225
     target 218
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 225
     target 208
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 225
     target 262
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 226
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 226
     target 262
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 227
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 227
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 227
     target 220
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 227
     target 262
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 227
     target 264
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 228
     target 210
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 228
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 228
     target 212
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 228
     target 165
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 228
     target 221
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 228
     target 225
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 228
     target 209
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 228
     target 217
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 228
     target 218
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 228
     target 208
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 228
     target 211
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 228
     target 263
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 229
     target 263
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 230
     target 210
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 230
     target 229
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 230
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 230
     target 212
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 230
     target 220
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 230
     target 221
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 230
     target 209
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 230
     target 218
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 230
     target 226
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 230
     target 223
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 230
     target 263
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 231
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 231
     target 210
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 231
     target 229
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 231
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 231
     target 212
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 231
     target 220
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 231
     target 221
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 231
     target 225
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 231
     target 227
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 231
     target 223
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 231
     target 264
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 232
     target 265
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 233
     target 265
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 234
     target 265
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 235
     target 265
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 236
     target 241
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 236
     target 237
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 236
     target 265
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 237
     target 241
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 237
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 237
     target 205
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 237
     target 202
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 237
     target 265
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 238
     target 241
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 238
     target 0
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 238
     target 205
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 238
     target 216
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 238
     target 202
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 238
     target 237
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 238
     target 265
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 239
     target 265
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 240
     target 265
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 241
     target 169
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 241
     target 0
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 241
     target 204
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 241
     target 139
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 241
     target 205
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 241
     target 171
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 241
     target 225
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 241
     target 237
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 241
     target 265
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 242
     target 265
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 243
     target 266
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 244
     target 243
     soc 1
+    tech 0
+    soctech 0
   ]
   edge [
     source 244
     target 266
+    soc 0
+    tech 0
     soctech 1
   ]
   edge [
     source 245
     target 248
+    soc 0
     tech 1
+    soctech 0
   ]
   edge [
     source 246
     target 249
+    soc 0
     tech 1
+    soctech 0
   ]
   edge [
     source 247
     target 249
+    soc 0
     tech 1
+    soctech 0
   ]
   edge [
     source 248
     target 249
+    soc 0
     tech 1
+    soctech 0
   ]
   edge [
     source 250
     target 246
+    soc 0
     tech 1
+    soctech 0
   ]
   edge [
     source 251
     target 249
+    soc 0
     tech 1
+    soctech 0
   ]
   edge [
     source 252
     target 249
+    soc 0
     tech 1
+    soctech 0
   ]
   edge [
     source 253
     target 249
+    soc 0
     tech 1
+    soctech 0
   ]
   edge [
     source 254
     target 255
+    soc 0
     tech 1
+    soctech 0
   ]
   edge [
     source 255
     target 249
+    soc 0
     tech 1
+    soctech 0
   ]
   edge [
     source 256
     target 255
+    soc 0
     tech 1
+    soctech 0
   ]
   edge [
     source 257
     target 258
+    soc 0
     tech 1
+    soctech 0
   ]
   edge [
     source 258
     target 249
+    soc 0
     tech 1
+    soctech 0
   ]
   edge [
     source 259
     target 250
+    soc 0
     tech 1
+    soctech 0
   ]
   edge [
     source 260
     target 249
+    soc 0
     tech 1
+    soctech 0
   ]
   edge [
     source 261
     target 249
+    soc 0
     tech 1
+    soctech 0
   ]
   edge [
     source 262
     target 249
+    soc 0
     tech 1
+    soctech 0
   ]
   edge [
     source 263
     target 249
+    soc 0
     tech 1
+    soctech 0
   ]
   edge [
     source 264
     target 249
+    soc 0
     tech 1
+    soctech 0
   ]
   edge [
     source 265
     target 259
+    soc 0
     tech 1
+    soctech 0
   ]
   edge [
     source 266
     target 249
+    soc 0
     tech 1
-  ]
-  edge [
-    source 267
-    target 268
-    soctech 1
+    soctech 0
   ]
 ]
