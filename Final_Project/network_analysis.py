@@ -35,6 +35,7 @@ def main():
     soc_to_soc = {(u,v) for u, v, e in st_graph.edges(data=True) if e['soc']==1}
     soc_to_tech = {(u,v) for u, v, e in st_graph.edges(data=True) if e['soctech']==1}
 
+    
     # Calculate descriptive statistics for network
     basic_algorithms(st_graph)
     centrality_algorithms(st_graph)
@@ -43,13 +44,12 @@ def main():
     plot_degree_distributions(st_graph, social_nodes, technical_nodes)
     visualize_network(st_graph, social_nodes, technical_nodes)
     
+    
     # Functions for the supply chain attack analysis
     # Primarily used for data dump to excel, may add more to functions later
     sca_technical_influence(st_graph, social_nodes)
-    sca_social_influence_targeted(st_graph, tech_to_tech)
+    sca_social_influence_targeted(st_graph, tech_to_tech, soc_to_soc)
     sca_social_influence_dispersed(st_graph, soc_to_soc, tech_to_tech)
-    sca_lowsoc_hightech(st_graph)
-
 
 
 # Basic statistics about the network
@@ -66,9 +66,11 @@ def basic_algorithms(graph):
           nx.number_weakly_connected_components(graph))
     # Calculate average path length (l)
     print('Average Path Length: ', nx.average_shortest_path_length(graph))
-    # Calculate maximum degree (d)
+    # Calculate degree metrics (d)
     degree_list = [lis[1] for lis in nx.degree(graph)]
     print('Maximum Degree: ', max(degree_list))
+    print('Minimum Degree: ', min(degree_list))
+    print('Average Degree: ', (sum(degree_list)/len(degree_list)))
     # Calculate density of graph
     print('Density: ', nx.density(graph))
 
@@ -139,20 +141,7 @@ def plot_degree_distributions(graph, social_nodes, technical_nodes):
     plt.ylabel('p(k)')
     plt.show()
 
-
-# Supply chain analysis for scenario where
-# (1) User isolated from social network *AND* repository is dependency for many technical nodes
-def sca_lowsoc_hightech(graph):
-   
-    graph = deepcopy(graph)
-    # Get in degree and out degree counts
-    print('lowsoc_hightech')
-    for x in graph.in_degree():
-        print(x)
-    for x in graph.out_degree():
-        print(x)
     
-
 # Supply chain analysis for scenario where
 # Social actor has contributed to many technical repos
 def sca_social_influence_dispersed(graph, soc_to_soc, tech_to_tech):
@@ -171,12 +160,13 @@ def sca_social_influence_dispersed(graph, soc_to_soc, tech_to_tech):
 
 # Supply chain analysis for scenario where
 # Technical node has many contributors to repo
-def sca_social_influence_targeted(graph, tech_to_tech):
+def sca_social_influence_targeted(graph, tech_to_tech, soc_to_soc):
     
     graph = deepcopy(graph)
     # Remove edges between technical nodes
     print('soc_targeted')
     graph.remove_edges_from(tech_to_tech)
+    graph.remove_edges_from(soc_to_soc)
     # Create dictionary from in degree output
     print(nx.in_degree_centrality(graph))
     
