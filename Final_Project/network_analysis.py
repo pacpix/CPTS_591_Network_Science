@@ -83,7 +83,6 @@ def centrality_algorithms(graph):
     print('Betweenness Centrality: ', max(centrality_dict,
                                     key=centrality_dict.get), max(centrality_dict.values()))
 
-
 # Plot degree distributions
 def plot_degree_distributions(graph, social_nodes, technical_nodes):
 
