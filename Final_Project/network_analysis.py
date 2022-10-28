@@ -8,6 +8,7 @@ Analyze network from generated gml file
 
 # stdlib
 import csv
+from copy import deepcopy
 
 # Third Party Libraries
 import matplotlib.pyplot as plt
@@ -41,7 +42,7 @@ def main():
     # Create degree distributions and visualize network
     plot_degree_distributions(st_graph, social_nodes, technical_nodes)
     visualize_network(st_graph, social_nodes, technical_nodes)
-
+    
     # Functions for the supply chain attack analysis
     # Primarily used for data dump to excel, may add more to functions later
     sca_technical_influence(st_graph, social_nodes)
@@ -143,6 +144,7 @@ def plot_degree_distributions(graph, social_nodes, technical_nodes):
 # (1) User isolated from social network *AND* repository is dependency for many technical nodes
 def sca_lowsoc_hightech(graph):
    
+    graph = deepcopy(graph)
     # Get in degree and out degree counts
     print('lowsoc_hightech')
     for x in graph.in_degree():
@@ -155,6 +157,7 @@ def sca_lowsoc_hightech(graph):
 # Social actor has contributed to many technical repos
 def sca_social_influence_dispersed(graph, soc_to_soc, tech_to_tech):
     
+    graph = deepcopy(graph)
     # Keep only social --> technical relations
     print('soc_dispersed')
     graph.remove_edges_from(soc_to_soc)
@@ -170,6 +173,7 @@ def sca_social_influence_dispersed(graph, soc_to_soc, tech_to_tech):
 # Technical node has many contributors to repo
 def sca_social_influence_targeted(graph, tech_to_tech):
     
+    graph = deepcopy(graph)
     # Remove edges between technical nodes
     print('soc_targeted')
     graph.remove_edges_from(tech_to_tech)
@@ -178,14 +182,16 @@ def sca_social_influence_targeted(graph, tech_to_tech):
     
     
 # Supply chain analysis for scenario where
-# Repository is depednency for many technical nodes
+# Repository is dependency for many technical nodes
 def sca_technical_influence(graph, social_nodes):
     
+    graph = deepcopy(graph)
     # Remove social nodes from the dataset, since only interested in technical supply chain
     print('technical only')
     graph.remove_nodes_from(social_nodes)
     # Create dictionary from out degree centrality output 
     print(nx.out_degree_centrality(graph))
+    print(nx.in_degree_centrality(graph))
     print(nx.degree_centrality(graph))
 
 
